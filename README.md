@@ -11,7 +11,7 @@
      + Xem bài viết, bình luận.
      + Thay đổi mật khẩu
    2. Admin requirement:
-     + Quản lí bài viết tin tức: tạo, sửa, xóa và duyệt bài viết.
+     + Quản lí bài viết tin tức: tạo, sửa, xóa bài viết.
      + Quản lí các user: tên user, số lượng bài viết.
      + Xem bài viết.
  
