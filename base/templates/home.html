@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+ <title>Login Registration Demo</title>
+ {% load static %}
+{% block content %}
+    <div id = "container">
+        <h1>home page</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Search</a></li>
+                <li><a href="#">Menu</a></li>
+                <li> <a href="#"> <form method="post" action="{% url 'logout' %}">
+                    {% csrf_token %}
+                    <button type="submit">Logout</button>
+                    </form> </a> 
+                </li>
+                <li> <a href="#"> <form method="post" action="{% url 'base:task' %}">
+                    {% csrf_token %}
+                    <button type="submit">Task</button>
+                    </form> </a> 
+                </li>
+            </ul>
+    </div>
+ 
+    <form>
+    
+    </form>
+    {% endblock content %}
+    
+
+
+

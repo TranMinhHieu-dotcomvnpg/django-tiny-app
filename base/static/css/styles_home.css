@@ -1,0 +1,36 @@
+* {
+    margin:0;
+    padding: 0;
+}
+body{
+    font-family: sans-serif;
+    color: #222;
+}
+#container ul{
+    background: #7fff7f;
+    list-style-type: none;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+
+#task-menu{
+    background: #7fff7f;
+    list-style-type: none;
+    text-align: center;
+}
+#login{
+    list-style-type: none;
+    text-align: center;
+    align-content: center;
+    min-height: 100vh;
+    background-color: aqua;
+}
+#sign-up{
+    list-style-type: none;
+    text-align: center;
+    align-content: center;
+    min-height: 100vh;
+    background-color: aqua;
+}

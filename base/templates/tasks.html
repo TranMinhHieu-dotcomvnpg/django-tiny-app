@@ -1,0 +1,38 @@
+{% extends 'base.html' %} <!-- Kế thừa từ base.html -->
+
+{% block title %}Danh sách nhiệm vụ{% endblock %} <!-- Thay đổi tiêu đề trang -->
+
+{% block content %}
+<div id ='task-menu'>
+<h1>Danh sách nhiệm vụ của bạn</h1>
+<form method="POST">
+    {% csrf_token %}
+
+    {{ TaskForm.title}}
+
+    <input class = "btn" type = "submit" name ="Create Task">
+</form>
+    {% for task in page_obj %}
+        <p> {{ task }} </p>
+        <a href = '{% url 'base:update-task' task.id %}'>Update </a>    
+        <br> </br>
+        <a href = '{% url 'base:delete-task' task.id %}'>Delete </a>
+
+    {% endfor %}
+    <br> </br>
+    <!-- Điều hướng phân trang -->
+<div>
+    {% if page_obj.has_previous %}
+        <a href="?page=1">Trang đầu</a>
+        <a href="?page={{ page_obj.previous_page_number }}">← Trang trước</a>
+    {% endif %}
+
+    <span>Trang {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span>
+
+    {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}">Trang sau →</a>
+        <a href="?page={{ page_obj.paginator.num_pages }}">Trang cuối</a>
+    {% endif %}
+</div>
+{% endblock %}
+</div>

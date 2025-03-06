@@ -1,0 +1,12 @@
+<h1> Delete Task</h1>
+
+<p>Ban co muon xoa task nay khong ? - {{task}}</p> 
+
+<form method ='POST'>
+    {% csrf_token %}
+    <input type="submit" name="Confirm deleteion">
+    <br></br>
+    <a href="{% url 'base:task' %}"> Cancel </a>
+</form>
+
+
