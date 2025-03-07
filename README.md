@@ -19,5 +19,5 @@
   - Tạo 1 thư mục để chứa các thư mục bên trên.
   - sau khi thực hiện xong việc cài đặt các thư mục, ta thực hiện các câu lệnh:
     + python manage.py superuser => để cài đặt tài khoản admin.
-    + python run
+    + python manage.py runserver => khi đó sẽ hiển thị ra đường dẫn trang web đó.
  
